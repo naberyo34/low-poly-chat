@@ -13,8 +13,14 @@ app.get('/', (_req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-io.on('connection', (_socket) => {
+io.on('connection', (socket) => {
   console.log('a user connected');
+
+  // socket.on はemitされたイベントの通知を受け取って発火(BE, FE共通)
+  socket.on('chat message', (msg) => {
+    // emit = 放出 ここではすべてのクライアントに通知を飛ばす
+    io.emit('chat message', msg);
+  });
 });
 
 server.listen(5000, () => {
