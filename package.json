@@ -1,0 +1,8 @@
+{
+  "name": "low-poly-chat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/naberyo34/low-poly-chat",
+  "author": "ryo watanabe <naberyo34@gmail.com>",
+  "license": "MIT"
+}
