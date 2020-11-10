@@ -1,0 +1,18 @@
+<!-- 公式チュートリアルに準拠 -->
+<!-- see: https://socket.io/get-started/chat/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>socket.io chat</title>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+  </body>
+</html>
