@@ -1,7 +1,18 @@
 extends layout
 
 block content
-    ul#messages
-    form(action="")
-      input(id="m" autocomplete="off")
-      button Send
+  section
+    h1 websocket-chat
+    .entrance.--active(data-js-selector="entrance")
+      p 名前を入力してください
+      form(data-js-selector="formName")
+        input(data-js-selector="inputName" autocomplete="off")
+        button(type="submit") 入室
+    .room(data-js-selector="room")
+      p 参加中のメンバー
+      ul(data-js-selector="member")
+      p 会話
+      ul(data-js-selector="message")
+      form(data-js-selector="formMessage")
+        input(data-js-selector="inputMessage" autocomplete="off")
+        button(type="submit") 送信
