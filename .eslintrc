@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "extends": ["plugin:prettier/recommended", "airbnb-base"],
+  "plugins": ["import", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    // 無名関数を許可する (jQueryだと利用機会が多いため)
+    "func-names": 0,
+    "no-undef": 0
+  }
+}
